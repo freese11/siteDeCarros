@@ -38,11 +38,52 @@
 figure {
     width: 35%;
     margin: 0;
-    border: 5px solid #4B5563;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 figure img {
     width: 100%;
-    height: 100%;
+    height: 280px;
+    object-fit: cover;  
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+figure:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+figcaption {
+    color: #111827;
+    font-size: 1.1vw;
+    padding: 10px;
+    font-weight: 500;
+    border-top: 4px solid #b91c1c;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoAgendar {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.botaoAgendar a {
+    text-decoration: none;
+    background-color: #112244;
+    color: #ffffff;
+    font-size: 1.2vw;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+}
+
+.botaoAgendar :hover{
+    transform: scale(1.02);
+    color: rgb(226, 226, 226);
 }
