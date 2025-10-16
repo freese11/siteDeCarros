@@ -1,0 +1,425 @@
+/* ===== RESET E FONTE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ===== MENU ===== */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.menu {
+  height: 100px;
+  background-color: #B91C1C;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo à esquerda */
+.menu img {
+  height: 170%;
+  margin-left: 12%;
+  margin-right: 7%;
+}
+
+/* Lista centralizada */
+ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.menu a {
+  color: #F3F4F6;
+  font-size: 1.1vw;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.menu a:hover {
+  color: #E5E7EB;
+  border-bottom: 3px solid #4B5563;
+  padding-bottom: 6px;
+}
+
+#atual {
+  color: #4B5563;
+}
+
+/* ===== SEÇÃO EQUIPE ===== */
+.equipe {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo {
+  color: #B91C1C;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #4B5563;
+  margin-bottom: 60px;
+}
+
+/* ===== MEMBROS ===== */
+.membro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-left: 6px solid #B91C1C;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.membro:hover {
+  transform: translateY(-5px);
+}
+
+/* Inverte posição da imagem */
+.membro.invertido {
+  flex-direction: row-reverse;
+  border-left: none;
+  border-right: 6px solid #B91C1C;
+}
+
+.membro img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #B91C1C;
+}
+
+/* Informações */
+.info {
+  text-align: left;
+  max-width: 500px;
+}
+
+.info h3 {
+  font-size: 1.6rem;
+  color: #B91C1C;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.cargo {
+  font-weight: 500;
+  color: #4B5563;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.info p {
+  font-weight: 400;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===== INSTAGRAM ===== */
+.insta {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #4B5563;
+  font-weight: 500;
+}
+
+.insta i {
+  color: #B91C1C;
+  font-size: 1.2rem;
+}
+
+.insta a {
+  color: #4B5563;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.insta a:hover {
+  color: #B91C1C;
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+  background-color: #4B5563;
+  color: #F3F4F6;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.95rem;
+}
+/* ===== FUNCIONÁRIO DO MÊS ===== */
+.func-mes {
+  background: linear-gradient(135deg, #fef9c3, #fcd34d);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.func-mes h2 {
+  color: #B91C1C;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.func-mes h2 i {
+  color: #facc15;
+  margin-right: 10px;
+}
+
+.func-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 4px solid #facc15;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.func-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #facc15;
+}
+
+.func-info {
+  text-align: left;
+  max-width: 500px;
+}
+
+.func-info h3 {
+  font-size: 1.8rem;
+  color: #B91C1C;
+  margin-bottom: 5px;
+}
+
+.func-info .cargo {
+  color: #4B5563;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.func-info .texto {
+  color: #555;
+  line-height: 1.5;
+}
+
+.func-info .insta {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #4B5563;
+  font-weight: 500;
+}
+
+.func-info .insta i {
+  color: #B91C1C;
+  font-size: 1.2rem;
+}
+
+.func-info .insta a {
+  color: #4B5563;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.func-info .insta a:hover {
+  color: #B91C1C;
+}
+
+
+
+/* ===== FEEDBACKS DE CLIENTES ===== */
+.feedbacks {
+  background-color: #f3f4f6;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo-feedback {
+  color: #B91C1C;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.titulo-feedback i {
+  color: #B91C1C;
+  margin-right: 8px;
+}
+
+.descricao-feedback {
+  color: #4B5563;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.cards-feedback {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 320px;
+  padding: 25px;
+  text-align: left;
+  border-top: 6px solid #B91C1C;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .texto {
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.cliente {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cliente img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #B91C1C;
+  object-fit: cover;
+}
+
+.cliente h4 {
+  color: #B91C1C;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.cliente span {
+  color: #4B5563;
+  font-size: 0.9rem;
+}
+
+
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .func-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .func-info {
+    text-align: center;
+  }
+
+  .func-card img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+  .cards-feedback {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #B91C1C;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 25px;
+  }
+
+  #menu-toggle:checked + .hamburger + ul {
+    display: flex;
+  }
+
+  .menu a {
+    font-size: 1.2rem;
+  }
+
+  .membro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .membro.invertido {
+    flex-direction: column;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .membro img {
+    width: 160px;
+    height: 160px;
+  }
+}
