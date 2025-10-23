@@ -5,6 +5,19 @@
     font-family: "Roboto", sans-serif;
 }
 
+#menu-toggle{
+    display: none;
+}
+
+.hamburguer{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffff;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
 .container-menu {
     height: 110px;
     display: flex;
@@ -132,6 +145,15 @@
         height: 25px;
         object-fit: contain;
     }
+    
+    .redesSociais p {
+        color: #111827;
+        font-size: 1.1rem;
+    }
+    
+    .localizacao p {
+        font-weight: 500;
+    }
 
     iframe {
         display: block;
@@ -147,3 +169,127 @@
         color: #B91C1C;
         font-weight: bold;
     }
+
+
+@media (max-width: 768px) {
+    .hamburguer{
+        display: block;
+        margin-left: auto;
+    }
+
+    .container-menu {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 80px;
+        padding: 15px 5%;
+    }
+
+    #id_logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .container-menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 10;
+        margin: 15px 0 0 0;
+        gap: 10px;
+        padding: 0;
+    }
+    
+    #menu-toggle:checked + .hamburguer + ul {
+        display: flex;
+    }
+
+    .container-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-menu a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .container-menu a:hover,
+    .container-menu a.active {
+        border-bottom: 3px solid transparent;
+    }
+
+    .container-menu a.active {
+        color: #4b5563;
+    }
+
+    #user {
+        display: none;
+    }
+
+    .titulo h2 {
+        font-size: 2rem;
+        padding-top: 5%;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .logo img {
+        width: 40%;
+        margin: -60px 0 0 0;
+    }
+    
+    .redesSociais {
+        margin-top: 20px;
+    }
+    
+    .redesSociais p {
+        font-size: 1rem;
+    }
+    
+    .localizacao {
+        padding: 10px 5%;
+    }
+
+    iframe {
+        width: 90%;
+        height: 350px;
+        border: 40px solid #4B5563;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .container-menu {
+        min-height: 70px;
+    }
+
+    #id_logo {
+        height: 50px;
+    }
+    
+    .titulo h2 {
+        font-size: 1.8rem;
+    }
+    
+    .logo img {
+        width: 60%;
+        margin: -40px 0 0 0;
+    }
+
+    .redesSociais p {
+        font-size: 0.9rem;
+    }
+    
+    .localizacao p {
+         font-size: 0.9rem;
+    }
+
+    iframe {
+        height: 300px;
+        border: 20px solid #4B5563;
+    }
+}
