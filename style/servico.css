@@ -10,6 +10,8 @@
     display: none;
 }
 
+/* teee */
+
 .hamburger {
     display: none;
     font-size: 24px;
@@ -180,6 +182,93 @@ ul {
 }
 
 
+
+.rodape{
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  
+}
+.rodape h1{
+  text-align: center;
+  color: #b91c1c;
+
+}
+.redes{
+  padding-left: 20px;
+  width: 70%; 
+  text-decoration: none; 
+  list-style: none;
+}
+
+
+#whatsapp{
+  margin-right: 2.7%;
+}
+#facebook, #whatsapp, #email, #telefone{
+  padding: 2%;
+  margin: 2%;
+  gap: 5px;
+  margin-right: 80%;
+  align-items: center;
+  display: flex;
+  width: 50%;
+  text-decoration: none;
+}
+#facebook img, #whatsapp img, #email img, #telefone img{
+width: 30px;
+}
+.missao-visao{
+  margin-top: 3%;
+  gap: 10%;
+  display: flex;
+}
+
+#facebook a, #whatsapp a, #email a, #telefone a{
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+.redes :hover{
+  color: #b91c1c;
+  transition: 0.3s;
+}
+
+
+.redes-missao{
+  display: flex;
+  width: 90%;
+}
+
+#missao{
+  width: 60%;
+}
+
+#visao{
+  width: 60%;
+}
+#missao h3, #visao h3{
+  padding-bottom: 3%;
+  color: red;
+}
+#missao p, #visao p{
+  max-width: 100%;
+}
+.faixa-rodape{
+  padding-top: 1%;
+  background-color: #4b5563;
+}
+
+#faixa-inform h3{
+  text-align:  center;
+  color: white;
+  margin-bottom: 2%;
+}
+#faixa-inform p{
+  text-align: center;
+  color: white;
+  padding-bottom: 1.3%;
+}
+
 @media (max-width: 768px) {
     .menu {
         height: 80px;
@@ -233,6 +322,51 @@ ul {
     .subtitulo {
         font-size: 1em;
     }
+
+     .rodape {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .redes-missao {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .redes {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #facebook, #whatsapp, #email, #telefone {
+    width: 80%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .missao-visao {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  #missao, #visao {
+    width: 90%;
+  }
+
+  .faixa-rodape {
+    padding: 20px 10px;
+  }
+
+  #faixa-inform h3 {
+    font-size: 1em;
+  }
+
+  #faixa-inform p {
+    font-size: 0.9em;
+  }
 }
 
 
@@ -278,4 +412,55 @@ ul {
     li :hover {
         padding-bottom: 8px;
     }
+
+     .rodape h1 {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
+
+  .redes-missao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #facebook, #whatsapp, #email, #telefone {
+    width: 90%;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  #facebook img, #whatsapp img, #email img, #telefone img {
+    width: 25px;
+  }
+
+  .missao-visao {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #missao, #visao {
+    width: 95%;
+  }
+
+  .faixa-rodape {
+    padding: 15px;
+  }
+
+  #faixa-inform h3 {
+    font-size: 0.9em;
+  }
+
+  #faixa-inform p {
+    font-size: 0.75em;
+    line-height: 1.3em;
+  }
 }
