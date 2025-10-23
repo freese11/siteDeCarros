@@ -5,61 +5,86 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
-/* ===== MENU ===== */
-#menu-toggle {
-  display: none;
+* {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-family: "Roboto", sans-serif;
 }
-
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
-  margin-right: 20px;
-  margin-left: auto;
+p{
+  font-weight: 400;
 }
-
-.menu {
-  height: 100px;
-  background-color: #B91C1C;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-/* Logo à esquerda */
-.menu img {
-  height: 170%;
-  margin-left: 12%;
-  margin-right: 7%;
-}
-
-/* Lista centralizada */
-ul {
-  display: flex;
-  list-style: none;
-  gap: 40px;
-}
-
-.menu a {
-  color: #F3F4F6;
-  font-size: 1.1vw;
-  text-decoration: none;
-  transition: 0.3s;
+h1{
   font-weight: 700;
 }
-
-.menu a:hover {
-  color: #E5E7EB;
-  border-bottom: 3px solid #4B5563;
-  padding-bottom: 6px;
+h2{
+  font-weight: 500;
+}
+#home a{
+  margin-right: 30px;
+  color: #4b5563;
+}
+.container-menu {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    background-color: #b91c1c;
+    padding: 0 5%;
 }
 
-#atual {
-  color: #4B5563;
+#menu-toggle{
+    display: none;
+}
+
+.hamburguer{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffff;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+#id_logo {
+    height: 190%;
+    width: 20%;
+}
+
+.container-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    height: 100%;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: auto;
+}
+
+.container-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2vw;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.container-menu a:hover {
+    color: #ffd2d2;
+    border-bottom: 3px solid #ffd2d2;
+}
+
+.container-menu a.active {
+    color: #4b5563;
+    border-bottom: 3px solid #4b5563;
+    pointer-events: none;
+}
+
+#user {
+    width: 35px;
+    height: 35px;
 }
 
 /* ===== SEÇÃO EQUIPE ===== */
@@ -171,13 +196,84 @@ ul {
 }
 
 /* ===== RODAPÉ ===== */
-.footer {
-  background-color: #4B5563;
-  color: #F3F4F6;
+.rodape h1{
   text-align: center;
-  padding: 20px 0;
-  margin-top: 60px;
-  font-size: 0.95rem;
+  color: #b91c1c;
+
+}
+.redes{
+  padding-left: 20px;
+  width: 70%; 
+  text-decoration: none; 
+  list-style: none;
+}
+
+
+#whatsapp{
+  margin-right: 2.7%;
+}
+#facebook, #whatsapp, #email, #telefone{
+  padding: 2%;
+  margin: 2%;
+  gap: 5px;
+  margin-right: 80%;
+  align-items: center;
+  display: flex;
+  width: 50%;
+}
+#facebook img, #whatsapp img, #email img, #telefone img{
+width: 30px;
+}
+.missao-visao{
+  margin-top: 3%;
+  gap: 10%;
+  display: flex;
+}
+
+#facebook a, #whatsapp a, #email a, #telefone a{
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+.redes :hover{
+  color: #b91c1c;
+  transition: 0.3s;
+}
+
+
+.redes-missao{
+  display: flex;
+  width: 90%;
+}
+
+#missao{
+  width: 60%;
+}
+
+#visao{
+  width: 60%;
+}
+#missao h3, #visao h3{
+  padding-bottom: 3%;
+  color: red;
+}
+#missao p, #visao p{
+  max-width: 100%;
+}
+.faixa-rodape{
+  padding-top: 1%;
+  background-color: #4b5563;
+}
+
+#faixa-inform h3{
+  text-align:  center;
+  color: white;
+  margin-bottom: 2%;
+}
+#faixa-inform p{
+  text-align: center;
+  color: white;
+  padding-bottom: 1.3%;
 }
 /* ===== FUNCIONÁRIO DO MÊS ===== */
 .func-mes {
@@ -349,6 +445,199 @@ ul {
   font-size: 0.9rem;
 }
 
+/* ===== MEDIA QUERY PARA 425px ===== */
+@media (max-width: 425px) {
+
+  /* ===== MENU SUPERIOR ===== */
+  .hamburguer{
+        display: block;
+        margin-left: auto;
+    }
+
+    .container-menu {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 80px;
+        padding: 15px 5%;
+    }
+
+    #id_logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .container-menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 10;
+        margin: 15px 0 0 0;
+        gap: 10px;
+        padding: 0;
+    }
+    
+    #menu-toggle:checked + .hamburguer + ul {
+        display: flex;
+    }
+
+    .container-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-menu a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .container-menu a:hover,
+    .container-menu a.active {
+        border-bottom: 3px solid transparent;
+    }
+
+    .container-menu a.active {
+        color: #4b5563;
+    }
+
+    #user {
+        display: none;
+    }
+
+  /* ===== SEÇÃO EQUIPE ===== */
+  .equipe {
+    padding: 40px 15px;
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .descricao {
+    font-size: 0.95rem;
+  }
+
+  .membro {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .membro.invertido {
+    flex-direction: column;
+  }
+
+  .membro img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info h3 {
+    font-size: 1.3rem;
+  }
+
+  .info p {
+    font-size: 0.9rem;
+  }
+
+  /* ===== FUNCIONÁRIO DO MÊS ===== */
+  .func-mes {
+    padding: 40px 15px;
+  }
+
+  .func-mes h2 {
+    font-size: 1.8rem;
+  }
+
+  .func-card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .func-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .func-info {
+    text-align: center;
+  }
+
+  .func-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .func-info .texto {
+    font-size: 0.9rem;
+  }
+
+  /* ===== FEEDBACKS ===== */
+  .feedbacks {
+    padding: 40px 10px;
+  }
+
+  .titulo-feedback {
+    font-size: 1.8rem;
+  }
+
+  .descricao-feedback {
+    font-size: 0.95rem;
+  }
+
+  .cards-feedback {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .card .texto {
+    font-size: 0.9rem;
+  }
+
+  /* ===== RODAPÉ ===== */
+  .redes-missao {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #missao, #visao {
+    width: 90%;
+  }
+
+  .redes {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #facebook, #whatsapp, #email, #telefone {
+    margin-right: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #facebook img, #whatsapp img, #email img, #telefone img {
+    width: 25px;
+  }
+
+  #faixa-inform h3 {
+    font-size: 1rem;
+  }
+
+  #faixa-inform p {
+    font-size: 0.85rem;
+  }
+}
 
 
 /* ===== Responsivo ===== */
