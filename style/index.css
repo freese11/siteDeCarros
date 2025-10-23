@@ -49,7 +49,7 @@ h2{
 #id_logo {
   padding-left: 5%;
   height: 200%;
-  width: 20%;
+  width: 15%;
 }
 #user{
  width: 35px;
@@ -59,7 +59,7 @@ h2{
   background-color: #b91c1c;
 }
 .container-banner img {
-  height: 700px;
+  height: 800px;
   width: 100%;
 }
 #local {
@@ -80,7 +80,8 @@ h2{
 #equipe-1,
 #equipe-2,
 #equipe-3,
-#equipe-4{
+#equipe-4,
+#equipe-5{
   max-width: 700px;
   margin-bottom: 4%;
   align-items: center;
@@ -89,6 +90,7 @@ h2{
   border-radius: 8px;
   padding: 10px;
 }
+
 
 .servico a {
   text-decoration: none;
@@ -169,20 +171,28 @@ h2{
   background-color: #b91c1c;
   color: #b91c1c;
 }
+.rodape{
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
 .rodape h1{
   text-align: center;
   color: #b91c1c;
 
 }
 .redes{
-  width: 70%;
-  background-color: #b91c1c;
+  padding-left: 20px;
+  width: 70%; 
+  text-decoration: none; 
+  list-style: none;
 }
+
 
 #whatsapp{
   margin-right: 2.7%;
 }
 #facebook, #whatsapp, #email, #telefone{
+  padding: 2%;
   margin: 2%;
   gap: 5px;
   margin-right: 80%;
@@ -194,8 +204,22 @@ h2{
 width: 30px;
 }
 .missao-visao{
+  margin-top: 3%;
+  gap: 10%;
   display: flex;
 }
+
+#facebook a, #whatsapp a, #email a, #telefone a{
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+.redes :hover{
+  color: #b91c1c;
+  transition: 0.3s;
+}
+
+
 .redes-missao{
   display: flex;
   width: 90%;
@@ -204,7 +228,29 @@ width: 30px;
 #missao{
   width: 60%;
 }
+
 #visao{
   width: 60%;
 }
+#missao h3, #visao h3{
+  padding-bottom: 3%;
+  color: red;
+}
+#missao p, #visao p{
+  max-width: 100%;
+}
+.faixa-rodape{
+  padding-top: 1%;
+  background-color: #4b5563;
+}
 
+#faixa-inform h3{
+  text-align:  center;
+  color: white;
+  margin-bottom: 2%;
+}
+#faixa-inform p{
+  text-align: center;
+  color: white;
+  padding-bottom: 1.3%;
+}
