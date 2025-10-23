@@ -5,6 +5,19 @@
     font-family: "Roboto", sans-serif;
 }
 
+#menu-toggle{
+    display: none;
+}
+
+.hamburguer{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffff;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
 .container-menu {
     height: 110px;
     display: flex;
@@ -96,7 +109,7 @@ figure {
 figure img {
     width: 100%;
     height: 280px;
-    object-fit: cover;  
+    object-fit: cover; 
     display: block;
     border-radius: 15px 15px 0 0;
 }
@@ -148,4 +161,151 @@ figcaption {
 .botaoAgendar :hover{
     transform: scale(1.02);
     color: rgb(226, 226, 226);
+}
+
+
+@media (max-width: 768px) {
+    .hamburguer{
+        display: block;
+        margin-left: auto;
+    }
+
+    .container-menu {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 80px;
+        padding: 15px 5%;
+    }
+
+    #id_logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .container-menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 10;
+        margin: 15px 0 0 0;
+        gap: 10px;
+        padding: 0;
+    }
+    
+    #menu-toggle:checked + .hamburguer + ul {
+        display: flex;
+    }
+
+    .container-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-menu a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .container-menu a:hover,
+    .container-menu a.active {
+        border-bottom: 3px solid transparent;
+    }
+
+    .container-menu a.active {
+        color: #4b5563;
+    }
+
+    #user {
+        display: none;
+    }
+
+    .titulo h2 {
+        font-size: 2rem;
+        padding-top: 5%;
+    }
+
+    .titulo p {
+        font-size: 1.1rem;
+        padding: 0 3%;
+    }
+
+    .fotos1,
+    .fotos2,
+    .fotos3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding-top: 5%;
+    }
+
+    figure {
+        width: 90%;
+    }
+
+    figure img {
+        height: 250px;
+    }
+
+    figcaption {
+        font-size: 1rem;
+        min-height: auto;
+        padding: 12px;
+    }
+
+    .video {
+        margin-top: 5%;
+    }
+
+    .video iframe {
+        width: 90%;
+        height: 40vw;
+        min-height: 240px;
+    }
+
+    .botaoAgendar {
+        margin: 30px 0;
+    }
+
+    .botaoAgendar a {
+        width: 90%;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .container-menu {
+        min-height: 70px;
+    }
+
+    #id_logo {
+        height: 50px;
+    }
+    
+    .titulo h2 {
+        font-size: 1.8rem;
+    }
+
+    .titulo p {
+        font-size: 1rem;
+    }
+
+    figure {
+        width: 95%;
+    }
+
+    figure img {
+        height: 220px;
+    }
+
+    .video iframe {
+        height: 50vw;
+    }
+
+    .botaoAgendar a {
+        font-size: 1rem;
+    }
 }
